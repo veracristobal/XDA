@@ -1,0 +1,54 @@
+.contact{
+    background-color: $smoky-black;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: 1fr;
+}
+.contact__container{
+    margin: 2rem 0 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    grid-column: 1 / 12;
+    
+    .contact__title {
+        font-size: $xx-large;
+        color: $white;
+        font-weight: $bold;
+    }
+
+    .contact__correo {
+        color: $isabelline;
+        font-size: $medium;
+    }
+    input{
+        width: 60%;
+        padding: 0.5rem;
+        font-size: $small;
+    }
+}
+
+
+//BOTON VERTICAL
+#footer-button{
+    display: flex;
+    grid-column: 12 / 13;
+    align-items: center;
+    background-color: $white;
+
+    .button-rotate {
+        transform: rotate(90deg);
+    }
+        
+        a{
+            font-size: $xx-large;
+            text-decoration: none;
+            color: $smoky-black;
+            font-family: $old-standard-tt;
+            font-weight: $bold;
+            
+        }
+}
+
+    
+    

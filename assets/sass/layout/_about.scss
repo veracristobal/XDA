@@ -1,0 +1,36 @@
+.about__container{
+    margin: 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: flex-start;
+
+    .about__title{
+        font-size: $xxx-large;
+        margin: 0;
+        max-width: 80%;
+    }
+
+    .about__paragraph{
+        font-size: $large;
+        max-width: 70%;
+        align-self: flex-start;
+        font-family: $raleway;
+        font-weight: $regular;
+        word-spacing: 3px;
+        line-height: 2rem;
+        margin: 0 0 1.5rem 0;
+    }
+    .about__button{
+        align-self: flex-start;
+        font-family: $raleway;
+        font-weight: $bold;
+        border: solid 1px black;
+        padding: 0.7rem 2.5rem;
+            
+            a {
+            text-decoration: none;
+            color: $smoky-black;
+            }
+    }
+}

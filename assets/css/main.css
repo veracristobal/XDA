@@ -1,0 +1,241 @@
+.grid-container {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 0.2fr 1fr 1fr 1fr;
+  grid-template-areas: "navigation navigation navigation navigation navigation" "about about heade heade heade" "about about heade heade heade" "contact contact heade heade heade";
+}
+
+.navigation {
+  grid-area: navigation;
+  background-color: black;
+}
+
+.heade {
+  grid-area: heade;
+}
+
+.about {
+  grid-area: about;
+}
+
+.contact {
+  grid-area: contact;
+}
+
+@media only screen and (max-width: 768px) {
+  .list__container * {
+    display: none;
+  }
+
+  .menu-btn {
+    top: 8%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    float: right;
+  }
+
+  .menu-btn__burguer {
+    width: 50px;
+    height: 6px;
+    background: #0c0910;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .menu-btn__burguer::before,
+.menu-btn__burguer::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    background: #0c0910;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .menu-btn__burguer::before {
+    transform: translateY(-16px);
+  }
+
+  .menu-btn__burguer::after {
+    transform: translateY(16px);
+  }
+
+  /*ANIMATION*/
+  .menu-btn.open .menu-btn__burguer {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .menu-btn.open .menu-btn__burguer::before {
+    transform: rotate(45deg) translate(35px, -35px);
+  }
+
+  .menu-btn.open .menu-btn__burguer::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+  }
+}
+@media only screen and (max-width: 992px) {
+  .grid-container {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr 1fr 1fr 0.5fr;
+    grid-template-areas: "navigation" "heade" "about " "contact";
+  }
+}
+.navigation {
+  background-color: white;
+}
+.navigation .navigation__logo {
+  height: 100%;
+  width: auto;
+  margin: 0;
+  background-color: #0c0910;
+  font-size: 1.875rem;
+  display: inline-block;
+}
+.navigation .navigation__logo p {
+  margin: 0;
+  color: #fff;
+  padding: 2rem 1.5rem;
+}
+.navigation .list__container {
+  display: inline-block;
+  float: right;
+  display: flex;
+  height: 100%;
+}
+.navigation .list__container .navigation__list {
+  display: inline-block;
+  align-self: center;
+}
+.navigation .list__container .navigation__list li {
+  display: inline-block;
+}
+.navigation .list__container .navigation__list .list-item {
+  margin-right: 3rem;
+  text-decoration: none;
+  color: #0c0910;
+  font-size: 1.125rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  align-self: center;
+}
+
+.heade {
+  display: inline-block;
+}
+.heade img {
+  width: 100%;
+  max-height: 100%;
+}
+
+.about__container {
+  margin: 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.about__container .about__title {
+  font-size: 4.7rem;
+  margin: 0;
+  max-width: 80%;
+}
+.about__container .about__paragraph {
+  font-size: 1.125rem;
+  max-width: 70%;
+  align-self: flex-start;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  word-spacing: 3px;
+  line-height: 2rem;
+  margin: 0 0 1.5rem 0;
+}
+.about__container .about__button {
+  align-self: flex-start;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  border: solid 1px black;
+  padding: 0.7rem 2.5rem;
+}
+.about__container .about__button a {
+  text-decoration: none;
+  color: #0c0910;
+}
+
+.contact {
+  background-color: #0c0910;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.contact__container {
+  margin: 2rem 0 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  grid-column: 1/12;
+}
+.contact__container .contact__title {
+  font-size: 1.875rem;
+  color: #fff;
+  font-weight: 700;
+}
+.contact__container .contact__correo {
+  color: #ececec;
+  font-size: 1rem;
+}
+.contact__container input {
+  width: 60%;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+}
+
+#footer-button {
+  display: flex;
+  grid-column: 12/13;
+  align-items: center;
+  background-color: #fff;
+}
+#footer-button .button-rotate {
+  transform: rotate(90deg);
+}
+#footer-button a {
+  font-size: 1.875rem;
+  text-decoration: none;
+  color: #0c0910;
+  font-family: "Old Standard TT", sans-serif;
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: "Old Standard TT", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=main.css.map */

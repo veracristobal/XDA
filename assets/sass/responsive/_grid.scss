@@ -1,0 +1,30 @@
+.grid-container {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 0.2fr 1fr 1fr 1fr ;
+    grid-template-areas: 
+    "navigation navigation navigation navigation navigation"
+    "about about heade heade heade"
+    "about about heade heade heade"
+    "contact contact heade heade heade";
+}
+
+.navigation {
+    grid-area: navigation;
+    background-color: black;
+    
+}
+
+.heade {
+    grid-area: heade;
+}
+
+.about {
+    grid-area: about;
+}
+
+.contact {
+    grid-area: contact;
+}
